@@ -43,10 +43,10 @@ module.exports = {
     comment: {
       clientID: '4bd9f5278b824687adfa',
       clientSecret: 'b3fb7f071fe80dc7a16ae346b770797fe0b4bb50',
-      repo: 'https://github.com/Kuaizi-co/blog.git',
-      owner: 'kz-fe',
-      admin: ['kz-fe'],
-      perPage: 5,
+      repo: 'blog',
+      owner: 'Kuaizi-co',
+      admin: ['kz-fe', 'tomieric'],
+      // perPage: 5,
       // id: 'comment',      // Ensure uniqueness and length less than 50
       distractionFreeMode: false  // Facebook-like distraction free mode
     },
