@@ -1,0 +1,17 @@
+language: node_js
+node_js: stable
+before_install:
+- export TRAVIS_COMMIT_MSG="$(git log --format='%h - %B' --no-merges -n 1)"
+- export TRAVIS_COMMIT_USER="$(git log --no-merges -n 1 --format=%an)"
+- export TRAVIS_COMMIT_EMAIL="$(git log --no-merges -n 1 --format=%ae)"
+install:
+- npm cache clean --force
+- npm install
+after_success:
+- sh deploy.sh
+notifications:
+  email:
+    recipients:
+      - shaojinhong@kuaizi.co
+    on_success: always # default: change
+    on_failure: never # default: always
