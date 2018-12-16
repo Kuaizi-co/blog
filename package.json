@@ -50,6 +50,6 @@
   },
   "dependencies": {
     "vuepress": "^1.0.0-alpha.28",
-    "vuepress-theme-track": "^1.0.9"
+    "vuepress-theme-track": "^1.0.10"
   }
 }
