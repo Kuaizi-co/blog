@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@tomieric/vuepress-plugin-rss": "^1.0.6",
+    "@tomieric/vuepress-plugin-rss": "^1.0.7",
     "serve": "^10.1.1",
     "vuepress": "^1.0.0-alpha.28",
     "vuepress-theme-track": "^1.0.10"

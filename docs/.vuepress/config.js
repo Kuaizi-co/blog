@@ -70,8 +70,7 @@ module.exports = {
   plugins: [
     ['@tomieric/vuepress-plugin-rss',
       {
-        base_url: '/blog/', // required
-        site_url: 'https://kuaizi-co.github.io', // required
+        site_url: 'https://kuaizi-co.github.io/blog', // required
         copyright: '@2018 - present www.kuaizi.ai', // optional
         filter: (f) => f.sidebar !== false,
         count: 20
