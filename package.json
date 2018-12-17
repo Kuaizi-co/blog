@@ -8,6 +8,7 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "deploy": "npm run docs:build && sh deploy.sh",
+    "preview": "serve",
     "track": "vp-track --help"
   },
   "keywords": [
@@ -21,8 +22,11 @@
     "tomieric"
   ],
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
+    "@tomieric/vuepress-plugin-rss": "^1.0.4",
+    "serve": "^10.1.1",
     "vuepress": "^1.0.0-alpha.28",
     "vuepress-theme-track": "^1.0.10"
-  }
+  },
+  "dependencies": {}
 }

@@ -25,7 +25,7 @@ module.exports = {
     }
   },
   themeConfig: {
-    footer: 'MIT Licensed | Copyright © 2018-present <a href="//www.kuaizi.ai" target="_blank">www.kuaizi.ai</a>',
+    footer: 'MIT Licensed | Copyright © 2018-present <a href="//www.kuaizi.ai" target="_blank">www.kuaizi.ai</a>, <a href="https://kuaizi-co.github.io/blog/rss.xml" target="_blank">订阅周刊</a>',
     // github card
     github: 'kuaizi-co',
     // 博客的 logo
@@ -66,5 +66,16 @@ module.exports = {
     // 周刊为团队发布，因此设置为 true
     // 个人博客则不显示作者组件
     showAuthor: true
-  }
+  },
+  plugins: [
+    ['@tomieric/vuepress-plugin-rss',
+      {
+        base_url: '/blog/', // required
+        site_url: 'https://kuaizi-co.github.io', // required
+        copyright: '@2018 - present www.kuaizi.ai', // optional
+        filter: (f) => f.layout === 'page' && f.sidebar !== false,
+        count: 20
+      }
+    ]
+  ]
 }
