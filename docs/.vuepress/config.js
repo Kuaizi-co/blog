@@ -73,7 +73,7 @@ module.exports = {
         base_url: '/blog/', // required
         site_url: 'https://kuaizi-co.github.io', // required
         copyright: '@2018 - present www.kuaizi.ai', // optional
-        filter: (f) => f.layout === 'page' && f.sidebar !== false,
+        filter: (f) => f.sidebar !== false,
         count: 20
       }
     ]
