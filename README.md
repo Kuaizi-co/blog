@@ -60,9 +60,31 @@ poster: https://tomieric.github.io/assets/images/background.jpg
 > yarn vp-track --help
 # -p 文章文件名，也是路由访问
 # -d 新建所在目录
-> yarn vp-track -p test -d ./docs/weekly
+> yarn vp-track -p test -d ./docs/post
 # or
-> npx vp-track -p test -d ./docs/weekly
+> npx vp-track -p test -d ./docs/post
+```
+
+## 写周刊
+
+在 `markdown` 文件头编写如下 `yaml` 信息，只要定义 `type: weekly`：
+
+```
+---
+title: 第一期 (2018-12-21)
+date: '2018-12-21 09:09:43'
+type: weekly
+tag:
+meta:
+  -
+    name: description
+    content: 筷子科技
+  -
+    name: keywords
+    content: kz-fe
+author: kuaizi-co
+poster: /images/post-1.jpg
+---
 ```
 
 ## 预览

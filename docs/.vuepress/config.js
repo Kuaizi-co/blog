@@ -53,14 +53,14 @@ module.exports = {
     // 和 vuepress 默认主题一样, 定制导航栏上的链接
     nav: [
         { text: '首页', link: '/', root: true }, // 指定它为博客根目录
-        { text: '周刊', link: '/weekly/', root: true }, // 指定它为标签目录
-        { text: '分类', link: '/category/' }, // 指定它为标签目录
+        { text: '博客', link: '/post/', root: true }, // 指定它为标签目录
+        { text: '周刊', link: '/weekly/' }, // 指定它为标签目录
         { text: '标签', link: '/tag/' }, // 指定它为标签目录
         { text: '关于我们', link: '/about.html' },
         { text: 'Track', link: '/track' }
     ],
     // 配置/page/1的链接地址
-    pageRoot: '/weekly/',
+    pageRoot: '/post/',
     sidebar: 'auto',
     // 是否显示文章作者，默认为 false
     // 周刊为团队发布，因此设置为 true
@@ -72,7 +72,7 @@ module.exports = {
       {
         site_url: 'https://kuaizi-co.github.io/blog', // required
         copyright: '@2018 - present www.kuaizi.ai', // optional
-        filter: (f) => f.sidebar !== false,
+        filter: ({ frontmatter }) => frontmatter.type === 'weekly' || (frontmatter.type === 'post' && frontmatter.sidebar !== false),
         count: 20
       }
     ]
