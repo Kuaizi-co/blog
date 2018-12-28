@@ -8,7 +8,7 @@
 > git clone https://github.com/kuaizi-co/blog.git
 > cd blog
 > yarn
-> yar docs:dev
+> yarn docs:dev
 ```
 
 ## 写文章
@@ -33,7 +33,7 @@ category:
   - vue
   - vue-cli
 # 所属标签，可以不填
-tag: 
+tag:
   - vue
   - vue-cli
   - vue-cli-plugin
