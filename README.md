@@ -96,3 +96,7 @@ yarn dev
 ## Deploy
 
 将本地写好的文字，通过 `Git push` 即可，由 `Travis-ci` 自动发布到 `gitpage`
+
+
+---
+(c) LICENSE BY [MIT](./LICENSE)
