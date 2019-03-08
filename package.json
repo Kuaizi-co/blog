@@ -7,7 +7,7 @@
     "dev": "vuepress dev docs",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "npm run docs:build && sh deploy.sh",
+    "deploy": "sh deploy.sh",
     "preview": "serve",
     "track": "vp-track --help"
   },
