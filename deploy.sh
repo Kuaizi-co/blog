@@ -5,6 +5,8 @@ set -e
 
 git config --global user.name "kz-fe"
 
+yarn
+
 # 生成静态文件
 npm run docs:build
 
