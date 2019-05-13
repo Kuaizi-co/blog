@@ -14,7 +14,7 @@ meta:
     name: keywords
     content: 前端,npm,lerna
 author: tomieric
-poster: /images/vue-cli-3-x.webp
+poster: /images/v2-a249c1ec19957248e6187692d0db7047_r.jpg
 ---
 
 ## npm
