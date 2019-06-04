@@ -4,11 +4,9 @@ date: '2019-06-04'
 type: post
 category:
   - 前端
-
 tag:
   - cep
   - 前端
-
 meta:
     -
       name: description
@@ -16,9 +14,7 @@ meta:
     -
       name: keywords
       content: adobe cep,cep开发,adobe插件
-
 author: tomieric
-
 poster: https://raw.githubusercontent.com/kuaizi-ai/pic/master/img/Adobe-logo.png
 ---
 
