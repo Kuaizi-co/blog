@@ -1,3 +1,27 @@
+---
+title: Adobe-CEP 插件开发
+date: '2019-06-04'
+type: post
+category:
+  - 前端
+
+tag:
+  - cep
+  - 前端
+
+meta:
+    -
+      name: description
+      content: Adobe CEP开发新手入门
+    -
+      name: keywords
+      content: adobe cep,cep开发,adobe插件
+
+author: tomieric
+
+poster: https://raw.githubusercontent.com/kuaizi-ai/pic/master/img/Adobe-logo.png
+---
+
 # Adobe-CEP  插件开发
 
 > CEP (公共扩展平台)，为 adobe 云应用创建扩展插件，能运用于Photoshop, Illustrator, InDesign, After Effects等等。
