@@ -57,7 +57,7 @@ poster: https://mmbiz.qpic.cn/mmbiz_png/ZejZic1KdpOK9HXcic7g1qbGwiaMsWPnczPlvwb4
 #### 团队规模
 > 当前规模
 
-p5（2个）、p4(2)
+p6(1) p5（1个）、p4(2)
 
 > 计划规模
 
