@@ -5,6 +5,8 @@ set -e
 
 git config --global user.name "kz-fe"
 
+rm -rf package-lock.json
+
 yarn
 
 # 生成静态文件
