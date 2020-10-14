@@ -110,3 +110,30 @@ p6(1) p5（1个）、p4(2)
 ### 团队图片墙
 ![avatar](/blog/images/tj-1.jpg = 960 * 720)
 ![avatar](/blog/images/tj-2.jpg = 960 * 720)
+
+## 愿景
+
+```
+import mate from 'company/mates'
+import self from 'self'
+export const hope = {
+  computed: {
+    level () {
+      return mate.help() && self.study()
+    }
+  }
+}
+```
+
+## 项目
+
+* [kz-cli 前端工作流命令行工具](https://github.com/Kuaizi-co/kz-cli)
+* [kz-table 扩展el-table](https://github.com/Kuaizi-co/kz-table)
+* [vue-cli 3项目模板](https://github.com/Kuaizi-co/vue-cli-preset-kz)
+* [vue瀑布流组件](https://github.com/Kuaizi-co/vue-bricks)
+* [more](https://github.com/Kuaizi-co)
+
+## 加入我们
+
+* [筷子官网](https://www.kuaizi.ai)
+* [招聘职位](https://www.lagou.com/gongsi/j666.html)
