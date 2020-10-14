@@ -12,6 +12,6 @@ after_success:
 notifications:
   email:
     recipients:
-      - shaojinhong@kuaizi.co
+      - huangyong@kuaizi.co
     on_success: always # default: change
     on_failure: never # default: always
