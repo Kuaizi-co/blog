@@ -15,8 +15,8 @@ meta:
     -
       name: keywords
       content: front-end, construction
-author: tomieric
-poster: https://mmbiz.qpic.cn/mmbiz_png/ZejZic1KdpOK9HXcic7g1qbGwiaMsWPnczPlvwb4qdcd2WwoX1h1qibTibS9kfajfjonPq6L3WYwEIGfzqSdhmlXMEg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1
+author: spademan
+poster: /images/tuandui-1.png
 ---
 
 # 我们的产品
@@ -108,5 +108,5 @@ p6(1) p5（1个）、p4(2)
 下午茶零食趴、节假日大礼包、周年豪奖、生日惊喜……还有更贴心的吗？
 
 ### 团队图片墙
-![avatar](/blog/images/tj-1.jpg)
-![avatar](/blog/images/tj-2.jpg)
+![avatar](/blog/images/tj-1.jpg = 960 * 720)
+![avatar](/blog/images/tj-2.jpg = 960 * 720)
