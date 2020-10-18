@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue 组件自动注册插件 | 前端周刊</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/blog/favicon.ico">
+    <meta name="description" content="vue-cli 组件自动注册,vue cli register component,支持 webpack 插件">
+    <meta name="keywords" content="vue-cli,vue-cli-plugin,vue-cli-plugin-register-component,webpack,register-component">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.bc4e2984.css" as="style"><link rel="preload" href="/blog/assets/js/app.9a207954.js" as="script"><link rel="preload" href="/blog/assets/js/6.d4095322.js" as="script"><link rel="preload" href="/blog/assets/js/4.64cbf7a8.js" as="script"><link rel="preload" href="/blog/assets/js/28.a5fc788a.js" as="script"><link rel="preload" href="/blog/assets/js/10.ce23e8e8.js" as="script"><link rel="preload" href="/blog/assets/js/11.7cde289b.js" as="script"><link rel="preload" href="/blog/assets/js/30.967a757e.js" as="script"><link rel="preload" href="/blog/assets/js/25.3294d02e.js" as="script"><link rel="preload" href="/blog/assets/js/13.4b26077c.js" as="script"><link rel="preload" href="/blog/assets/js/21.65ff6ff5.js" as="script"><link rel="preload" href="/blog/assets/js/31.6775aed3.js" as="script"><link rel="preload" href="/blog/assets/js/23.c6a37407.js" as="script"><link rel="preload" href="/blog/assets/js/15.b4502122.js" as="script"><link rel="preload" href="/blog/assets/js/5.865b38fd.js" as="script"><link rel="preload" href="/blog/assets/js/51.e5b84ed7.js" as="script"><link rel="preload" href="/blog/assets/js/24.193852d3.js" as="script"><link rel="prefetch" href="/blog/assets/js/1.d622105c.js"><link rel="prefetch" href="/blog/assets/js/12.6ca6e9f4.js"><link rel="prefetch" href="/blog/assets/js/14.10c8486f.js"><link rel="prefetch" href="/blog/assets/js/16.3866ee9b.js"><link rel="prefetch" href="/blog/assets/js/17.bbe78093.js"><link rel="prefetch" href="/blog/assets/js/18.9907e1f2.js"><link rel="prefetch" href="/blog/assets/js/19.783d5ba6.js"><link rel="prefetch" href="/blog/assets/js/20.3c937b8a.js"><link rel="prefetch" href="/blog/assets/js/22.50ce623e.js"><link rel="prefetch" href="/blog/assets/js/26.eddcc531.js"><link rel="prefetch" href="/blog/assets/js/27.3b8e77fb.js"><link rel="prefetch" href="/blog/assets/js/29.da8cd36f.js"><link rel="prefetch" href="/blog/assets/js/32.9bb40d9c.js"><link rel="prefetch" href="/blog/assets/js/33.1036ba5f.js"><link rel="prefetch" href="/blog/assets/js/34.5612442f.js"><link rel="prefetch" href="/blog/assets/js/35.cc055681.js"><link rel="prefetch" href="/blog/assets/js/36.cabad0ff.js"><link rel="prefetch" href="/blog/assets/js/37.c4424565.js"><link rel="prefetch" href="/blog/assets/js/38.c8fa029c.js"><link rel="prefetch" href="/blog/assets/js/39.19fc3d4a.js"><link rel="prefetch" href="/blog/assets/js/40.f021c568.js"><link rel="prefetch" href="/blog/assets/js/41.793f7f4e.js"><link rel="prefetch" href="/blog/assets/js/42.6f27a5bc.js"><link rel="prefetch" href="/blog/assets/js/43.e8c112b8.js"><link rel="prefetch" href="/blog/assets/js/44.bd1a3840.js"><link rel="prefetch" href="/blog/assets/js/45.a764f837.js"><link rel="prefetch" href="/blog/assets/js/46.9fbc0d8e.js"><link rel="prefetch" href="/blog/assets/js/47.96a9c9e7.js"><link rel="prefetch" href="/blog/assets/js/48.58fd26b9.js"><link rel="prefetch" href="/blog/assets/js/49.53cd3ec8.js"><link rel="prefetch" href="/blog/assets/js/50.240d63b7.js"><link rel="prefetch" href="/blog/assets/js/52.055263b3.js"><link rel="prefetch" href="/blog/assets/js/53.03cc0e10.js"><link rel="prefetch" href="/blog/assets/js/54.bf34bb71.js"><link rel="prefetch" href="/blog/assets/js/55.ef80fe04.js"><link rel="prefetch" href="/blog/assets/js/56.b8269e5b.js"><link rel="prefetch" href="/blog/assets/js/57.903564fd.js"><link rel="prefetch" href="/blog/assets/js/7.57b0655a.js"><link rel="prefetch" href="/blog/assets/js/8.90da5599.js"><link rel="prefetch" href="/blog/assets/js/9.b5a43ae9.js"><link rel="prefetch" href="/blog/assets/js/vendors~flowchart.21b2360e.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.bc4e2984.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="track-theme"><header class="theme-track--header"><div class="theme-track--navbar"><div class="theme-track--brand"><a href="/blog/" class="theme-track--logo router-link-active"><img src="/blog/images/logo.png"></a></div> <nav class="theme-track--nav-links"><ul><li><a href="/blog/" class="router-link-active">首页</a></li><li><a href="/blog/post/" class="router-link-active active">博客</a></li><li><a href="/blog/weekly/">周刊</a></li><li><a href="/blog/tag/">标签</a></li><li><a href="/blog/about.html">关于我们</a></li><li><a href="/blog/track.html">Track</a></li></ul> <div class="nav-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <div class="theme-track--nav-mask" style="display:none;"></div></nav> <div class="theme-track--header-github"><a href="//github.com/kuaizi-co" target="_blank"><i class="iconfont icon-github"></i></a></div> <div class="theme-track--header-search"><div class="search-box"><i class="iconfont icon-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value="" class="search-text"></div> <ul class="search-suggestion" style="display:none;"></ul> <button class="search-btn"><i class="iconfont icon-search"></i></button></div></div></header> <div class="track-them--container"><div class="theme-track--content-wrapper"><img src="/blog/images/post-5.jpg" class="theme-track--content-poster"> <div class="theme-track--content"><div class="sidebar-wrapper"><div><div class="sidebar"> <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>vue 组件自动注册插件</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/blog/post/vue-cli-plugin-register-component.html#目录结构" class="sidebar-link">目录结构</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/post/vue-cli-plugin-register-component.html#使用" class="sidebar-link">使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/post/vue-cli-plugin-register-component.html#多页面" class="sidebar-link">多页面</a></li></ul></li><li><a href="/blog/post/vue-cli-plugin-register-component.html#vue-register-component-webpack-plugin" class="sidebar-link">vue-register-component-webpack-plugin</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/post/vue-cli-plugin-register-component.html#安装" class="sidebar-link">安装</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/post/vue-cli-plugin-register-component.html#使用-2" class="sidebar-link">使用</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div></div></div> <div class="theme-track--content-main"><p class="theme-track--content-date"><span>Publish: 2018-12-06 20:09:43</span> <span>
+            Tags:
+            <a href="/blog/tags/vue" class="tag">
+              vue
+            </a><a href="/blog/tags/vue-cli" class="tag">
+              vue-cli
+            </a><a href="/blog/tags/vue-cli-plugin" class="tag">
+              vue-cli-plugin
+            </a><a href="/blog/tags/webpack" class="tag">
+              webpack
+            </a><a href="/blog/tags/前端构建" class="tag">
+              前端构建
+            </a></span></p> <div class="theme-track--content-meta"><h1>vue 组件自动注册插件</h1> <div class="theme-track--github-card"><span><img src="https://github.com/tomieric.png?size=100"></span> <p class="theme-track--content-meta-author"><i class="iconfont icon-home"></i> tomieric</p> <!----></div> <!----></div> <div class="content__default"><blockquote><p>参照@vuepress/plugin-register-component</p></blockquote> <p>全局组件自动注册</p> <h2 id="目录结构"><a href="#目录结构" class="header-anchor">#</a> 目录结构</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>src
+  <span class="token operator">-</span> components
+    <span class="token operator">-</span> componentA
+    <span class="token operator">-</span> componentB
+  <span class="token operator">-</span> pages
+    <span class="token operator">-</span> index
+      <span class="token operator">-</span> components
+        _common
+          header<span class="token punctuation">.</span>vue
+          footer<span class="token punctuation">.</span>vue
+        layout<span class="token punctuation">.</span>vue
+        _page<span class="token punctuation">.</span>vue
+</code></pre></div><p>默认自动注册 <code>components</code> 目录所有组件, 其中不会注册 <code>_</code>开头的文件或者文件夹</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code># src<span class="token operator">/</span>pages<span class="token operator">/</span>index<span class="token operator">/</span>components<span class="token operator">/</span>index<span class="token punctuation">.</span>js
+<span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'layout'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./layout.vue'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code># src<span class="token operator">/</span>app<span class="token punctuation">.</span>js
+<span class="token keyword">import</span> <span class="token string">'src/components'</span>
+
+<span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="多页面"><a href="#多页面" class="header-anchor">#</a> 多页面</h3> <p>共用</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code># src<span class="token operator">/</span>app<span class="token punctuation">.</span>js
+<span class="token keyword">import</span> <span class="token string">'./components'</span>
+
+<span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>单页</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code># src<span class="token operator">/</span>pages<span class="token operator">/</span>index<span class="token operator">/</span>main<span class="token punctuation">.</span>js
+<span class="token keyword">import</span> <span class="token string">'./components'</span>
+<span class="token comment">// ...</span>
+</code></pre></div><p>webpack配置</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>puligns<span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token keyword">new</span> <span class="token class-name">registerComponentWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    componentDir<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'./src/components'</span><span class="token punctuation">,</span> <span class="token string">'./src/pages/index/components'</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span>
+</code></pre></div><h2 id="vue-register-component-webpack-plugin"><a href="#vue-register-component-webpack-plugin" class="header-anchor">#</a> vue-register-component-webpack-plugin</h2> <p>vue组件自动注册</p> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">&gt;</span> npm i stall @kuaizi<span class="token operator">/</span>vue<span class="token operator">-</span>cli<span class="token operator">-</span>plugin<span class="token operator">-</span>register<span class="token operator">-</span>component
+</code></pre></div><h2 id="使用-2"><a href="#使用-2" class="header-anchor">#</a> 使用</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code># webpack<span class="token punctuation">.</span>config<span class="token punctuation">.</span>js
+<span class="token keyword">const</span> vueRegisterComponentWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@kuaizi/vue-cli-plugin-register-component'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">vueRegisterComponentWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      componentDir<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'./src/components'</span><span class="token punctuation">,</span> <span class="token string">'./src/entries/index/components'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token comment">// 全局额外组件</span>
+      components<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'element'</span><span class="token punctuation">,</span> path<span class="token operator">:</span> <span class="token string">'./src/additional/element.vue'</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在入口文件导入自动生成的组件注册文件</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">-</span>src
+  <span class="token operator">-</span> main<span class="token punctuation">.</span>js
+  <span class="token operator">-</span> components
+    <span class="token operator">-</span> index<span class="token punctuation">.</span>js <span class="token comment">// 自动生成</span>
+</code></pre></div><p>在 <code>main.js</code> 中导入 <code>components/index.js</code></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code># main<span class="token punctuation">.</span>js
+<span class="token keyword">import</span> <span class="token string">'./components'</span>
+</code></pre></div></div> <p class="theme-track--content-page"><a href="/blog/post/vue-cli-3-x-upgrade.html" class="prev"><i class="iconfont icon-prev"></i>
+            vue-cli 3.x 升级之路
+          </a> <a href="/blog/post/vue-cli-plugin-auto-router.html" class="next">
+            自动路由插件
+            <i class="iconfont icon-next"></i></a></p> <div id="comment-container"></div></div></div></div></div> <div class="theme-track--footer"><p>MIT Licensed | Copyright © 2018-present <a href="//www.kuaizi.ai" target="_blank">www.kuaizi.ai</a>, <a href="https://kuaizi-co.github.io/blog/rss.xml" target="_blank">订阅周刊</a></p> <p>
+  Powered by vuepress theme <a href="//github.com/tomieric/vuepress-theme-track" target="_blank">Track</a>.
+  Inspired by <a href="//github.com/Yubisaki/vuepress-theme-yubisaki" target="_blank">yubisaki</a></p></div></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.9a207954.js" defer></script><script src="/blog/assets/js/6.d4095322.js" defer></script><script src="/blog/assets/js/4.64cbf7a8.js" defer></script><script src="/blog/assets/js/28.a5fc788a.js" defer></script><script src="/blog/assets/js/10.ce23e8e8.js" defer></script><script src="/blog/assets/js/11.7cde289b.js" defer></script><script src="/blog/assets/js/30.967a757e.js" defer></script><script src="/blog/assets/js/25.3294d02e.js" defer></script><script src="/blog/assets/js/13.4b26077c.js" defer></script><script src="/blog/assets/js/21.65ff6ff5.js" defer></script><script src="/blog/assets/js/31.6775aed3.js" defer></script><script src="/blog/assets/js/23.c6a37407.js" defer></script><script src="/blog/assets/js/15.b4502122.js" defer></script><script src="/blog/assets/js/5.865b38fd.js" defer></script><script src="/blog/assets/js/51.e5b84ed7.js" defer></script><script src="/blog/assets/js/24.193852d3.js" defer></script>
+  </body>
+</html>

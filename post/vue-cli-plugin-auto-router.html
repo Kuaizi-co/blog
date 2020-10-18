@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>自动路由插件 | 前端周刊</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/blog/favicon.ico">
+    <meta name="description" content="vue-cli 自动路由插件,vue cli auto router,支持 webpack 插件">
+    <meta name="keywords" content="vue-cli,vue-cli-plugin,vue-cli-plugin-auto-router,webpack,auto router">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.bc4e2984.css" as="style"><link rel="preload" href="/blog/assets/js/app.9a207954.js" as="script"><link rel="preload" href="/blog/assets/js/6.d4095322.js" as="script"><link rel="preload" href="/blog/assets/js/4.64cbf7a8.js" as="script"><link rel="preload" href="/blog/assets/js/28.a5fc788a.js" as="script"><link rel="preload" href="/blog/assets/js/10.ce23e8e8.js" as="script"><link rel="preload" href="/blog/assets/js/11.7cde289b.js" as="script"><link rel="preload" href="/blog/assets/js/30.967a757e.js" as="script"><link rel="preload" href="/blog/assets/js/25.3294d02e.js" as="script"><link rel="preload" href="/blog/assets/js/13.4b26077c.js" as="script"><link rel="preload" href="/blog/assets/js/21.65ff6ff5.js" as="script"><link rel="preload" href="/blog/assets/js/31.6775aed3.js" as="script"><link rel="preload" href="/blog/assets/js/23.c6a37407.js" as="script"><link rel="preload" href="/blog/assets/js/15.b4502122.js" as="script"><link rel="preload" href="/blog/assets/js/5.865b38fd.js" as="script"><link rel="preload" href="/blog/assets/js/50.240d63b7.js" as="script"><link rel="preload" href="/blog/assets/js/24.193852d3.js" as="script"><link rel="prefetch" href="/blog/assets/js/1.d622105c.js"><link rel="prefetch" href="/blog/assets/js/12.6ca6e9f4.js"><link rel="prefetch" href="/blog/assets/js/14.10c8486f.js"><link rel="prefetch" href="/blog/assets/js/16.3866ee9b.js"><link rel="prefetch" href="/blog/assets/js/17.bbe78093.js"><link rel="prefetch" href="/blog/assets/js/18.9907e1f2.js"><link rel="prefetch" href="/blog/assets/js/19.783d5ba6.js"><link rel="prefetch" href="/blog/assets/js/20.3c937b8a.js"><link rel="prefetch" href="/blog/assets/js/22.50ce623e.js"><link rel="prefetch" href="/blog/assets/js/26.eddcc531.js"><link rel="prefetch" href="/blog/assets/js/27.3b8e77fb.js"><link rel="prefetch" href="/blog/assets/js/29.da8cd36f.js"><link rel="prefetch" href="/blog/assets/js/32.9bb40d9c.js"><link rel="prefetch" href="/blog/assets/js/33.1036ba5f.js"><link rel="prefetch" href="/blog/assets/js/34.5612442f.js"><link rel="prefetch" href="/blog/assets/js/35.cc055681.js"><link rel="prefetch" href="/blog/assets/js/36.cabad0ff.js"><link rel="prefetch" href="/blog/assets/js/37.c4424565.js"><link rel="prefetch" href="/blog/assets/js/38.c8fa029c.js"><link rel="prefetch" href="/blog/assets/js/39.19fc3d4a.js"><link rel="prefetch" href="/blog/assets/js/40.f021c568.js"><link rel="prefetch" href="/blog/assets/js/41.793f7f4e.js"><link rel="prefetch" href="/blog/assets/js/42.6f27a5bc.js"><link rel="prefetch" href="/blog/assets/js/43.e8c112b8.js"><link rel="prefetch" href="/blog/assets/js/44.bd1a3840.js"><link rel="prefetch" href="/blog/assets/js/45.a764f837.js"><link rel="prefetch" href="/blog/assets/js/46.9fbc0d8e.js"><link rel="prefetch" href="/blog/assets/js/47.96a9c9e7.js"><link rel="prefetch" href="/blog/assets/js/48.58fd26b9.js"><link rel="prefetch" href="/blog/assets/js/49.53cd3ec8.js"><link rel="prefetch" href="/blog/assets/js/51.e5b84ed7.js"><link rel="prefetch" href="/blog/assets/js/52.055263b3.js"><link rel="prefetch" href="/blog/assets/js/53.03cc0e10.js"><link rel="prefetch" href="/blog/assets/js/54.bf34bb71.js"><link rel="prefetch" href="/blog/assets/js/55.ef80fe04.js"><link rel="prefetch" href="/blog/assets/js/56.b8269e5b.js"><link rel="prefetch" href="/blog/assets/js/57.903564fd.js"><link rel="prefetch" href="/blog/assets/js/7.57b0655a.js"><link rel="prefetch" href="/blog/assets/js/8.90da5599.js"><link rel="prefetch" href="/blog/assets/js/9.b5a43ae9.js"><link rel="prefetch" href="/blog/assets/js/vendors~flowchart.21b2360e.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.bc4e2984.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="track-theme"><header class="theme-track--header"><div class="theme-track--navbar"><div class="theme-track--brand"><a href="/blog/" class="theme-track--logo router-link-active"><img src="/blog/images/logo.png"></a></div> <nav class="theme-track--nav-links"><ul><li><a href="/blog/" class="router-link-active">首页</a></li><li><a href="/blog/post/" class="router-link-active active">博客</a></li><li><a href="/blog/weekly/">周刊</a></li><li><a href="/blog/tag/">标签</a></li><li><a href="/blog/about.html">关于我们</a></li><li><a href="/blog/track.html">Track</a></li></ul> <div class="nav-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <div class="theme-track--nav-mask" style="display:none;"></div></nav> <div class="theme-track--header-github"><a href="//github.com/kuaizi-co" target="_blank"><i class="iconfont icon-github"></i></a></div> <div class="theme-track--header-search"><div class="search-box"><i class="iconfont icon-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value="" class="search-text"></div> <ul class="search-suggestion" style="display:none;"></ul> <button class="search-btn"><i class="iconfont icon-search"></i></button></div></div></header> <div class="track-them--container"><div class="theme-track--content-wrapper"><img src="https://tomieric.github.io/assets/images/background.jpg" class="theme-track--content-poster"> <div class="theme-track--content"><div class="sidebar-wrapper"><div><div class="sidebar"> <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>自动路由插件</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/blog/post/vue-cli-plugin-auto-router.html#使用" class="sidebar-link">使用</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/post/vue-cli-plugin-auto-router.html#example" class="sidebar-link">example</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/post/vue-cli-plugin-auto-router.html#参数" class="sidebar-link">参数</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/post/vue-cli-plugin-auto-router.html#使用-2" class="sidebar-link">使用</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/post/vue-cli-plugin-auto-router.html#项目目录" class="sidebar-link">项目目录</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/post/vue-cli-plugin-auto-router.html#支持-route-meta-标签" class="sidebar-link">支持 route-meta 标签</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/post/vue-cli-plugin-auto-router.html#配置" class="sidebar-link">配置</a></li><li class="sidebar-sub-header"><a href="/blog/post/vue-cli-plugin-auto-router.html#使用-3" class="sidebar-link">使用</a></li><li class="sidebar-sub-header"><a href="/blog/post/vue-cli-plugin-auto-router.html#vue-router-direct" class="sidebar-link">vue-router direct</a></li></ul></li></ul></div></li></ul> </div></div></div> <div class="theme-track--content-main"><p class="theme-track--content-date"><span>Publish: 2018-12-05 21:09:43</span> <span>
+            Tags:
+            <a href="/blog/tags/vue" class="tag">
+              vue
+            </a><a href="/blog/tags/vue-cli" class="tag">
+              vue-cli
+            </a><a href="/blog/tags/vue-cli-plugin" class="tag">
+              vue-cli-plugin
+            </a><a href="/blog/tags/webpack" class="tag">
+              webpack
+            </a><a href="/blog/tags/前端构建" class="tag">
+              前端构建
+            </a></span></p> <div class="theme-track--content-meta"><h1>自动路由插件</h1> <div class="theme-track--github-card"><span><img src="https://github.com/tomieric.png?size=100"></span> <p class="theme-track--content-meta-author"><i class="iconfont icon-home"></i> tomieric</p> <!----></div> <!----></div> <div class="content__default"><blockquote><p>多页面自动路由 webpack 插件</p></blockquote> <p>单页面可以直接使用 <a href="https://github.com/ktsn/vue-route-generator" target="_blank" rel="noopener noreferrer">vue-route-generator<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h1 id="vue-cli-plugin-auto-router"><a href="#vue-cli-plugin-auto-router" class="header-anchor">#</a> vue-cli-plugin-auto-router</h1> <p>使用了 <a href="https://github.com/ktsn/vue-route-generator" target="_blank" rel="noopener noreferrer">vue-route-generator<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>单路由可以直接使用 <a href="https://github.com/ktsn/vue-auto-routing" target="_blank" rel="noopener noreferrer">vue-auto-routing<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language- extra-class"><pre class="language-text"><code>vue add @kuaizi/vue-cli-plugin-auto-router
+</code></pre></div><p>默认页面文件夹为 <code>./src/pages/*/views/</code>，自定义需要添加配置 <code>package.json</code> 中的 <code>autoRouterConf</code> 字段</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  //...
+  autoRouterConf: {
+    pages: ['./src/pages/**/views/'],
+    importPrefix: '../views'
+  }
+  //...
+}
+</code></pre></div><h2 id="example"><a href="#example" class="header-anchor">#</a> example</h2> <div class="language- extra-class"><pre class="language-text"><code>&gt; cd example
+&gt; yarn
+&gt; yarn dev
+</code></pre></div><h1 id="auto-router-webpack-plugin"><a href="#auto-router-webpack-plugin" class="header-anchor">#</a> auto-router-webpack-plugin</h1> <blockquote><p>多页面自动路由 <code>webpack</code> 插件</p></blockquote> <p>单页面可以直接使用 <a href="https://github.com/ktsn/vue-route-generator" target="_blank" rel="noopener noreferrer">vue-route-generator<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="参数"><a href="#参数" class="header-anchor">#</a> 参数</h2> <ul><li>options {Object} 配置参数
+<ul><li>pages {String|Array} 支持globby的匹配，支持字符串或者数组 <a href="https://github.com/sindresorhus/globby#globbing-patterns" target="_blank" rel="noopener noreferrer">globbing-patterns<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>importPrefix {String} 默认是<code>../views/</code>, <code>vue-route-generator</code>默认的是<code>@/pages</code>, 异步组件的默认路径，eg：import('../views/account.vue')</li></ul></li></ul> <table><thead><tr><th>参数</th> <th>类型</th> <th>描述</th></tr></thead> <tbody><tr><td>pages</td> <td><code>String|Array</code></td> <td>支持globby的匹配，支持字符串或者数组 <a href="https://github.com/sindresorhus/globby#globbing-patterns" target="_blank" rel="noopener noreferrer">globbing-patterns<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></td></tr> <tr><td>importPrefix</td> <td><code>String</code></td> <td>默认是<code>../views/</code>, <code>vue-route-generator</code>默认的是<code>@/pages</code>, 异步组件的默认路径，eg：import('../views/account.vue')</td></tr></tbody></table> <h2 id="使用-2"><a href="#使用-2" class="header-anchor">#</a> 使用</h2> <div class="language- extra-class"><pre class="language-text"><code># vue.config.js
+export default {
+  // ...
+  configureWebpack: {
+      cache: true,
+      plugins: [
+        new webpackPluginAutoRouter({ pages: './src/pages/*/views/'})
+      ],
+  },
+  // ...
+}
+</code></pre></div><p>或者</p> <div class="language- extra-class"><pre class="language-text"><code># webpack.config.js
+module.exports = {
+  // ...
+  plugins: [
+    new webpackPluginAutoRouter({ pages: './src/pages/*/views/'})
+  ],
+  // ...
+}
+</code></pre></div><h2 id="项目目录"><a href="#项目目录" class="header-anchor">#</a> 项目目录</h2> <div class="language- extra-class"><pre class="language-text"><code>.
+├─assets
+│  └─less
+├─components
+│  ├─charts
+│  ├─count-to
+│  └─info-card
+├─i18n
+├─lib
+│  └─services
+├─pages
+│  ├─index
+│  │  ├─components
+│  │  │  └─common
+│  │  ├─routes
+│  │  ├─store
+│  │  └─views
+│  │      └─manage
+│  │          └─word
+│  └─login
+│      └─views
+└─store
+    └─modules
+</code></pre></div><p><code>index</code> 和 <code>login</code> 分别是多页 <code>pages</code> 的单页目录，我们设置 <code>pages: './src/pages/*/views/'</code> 则可以匹配到 <code>index</code> 和 <code>login</code>, <code>views</code>是存放单页路由页面组件的目录</p> <p>每个单页目录中 <code>routes</code> 是和 <code>views</code> 同级，生成的<code>routes/index.js</code> 文件应用 <code>views</code>的路由页面组件路径为 <code>../views/xxx.vue</code>, 我们设置 <code>importPrefix: '../views'</code></p> <h2 id="支持-route-meta-标签"><a href="#支持-route-meta-标签" class="header-anchor">#</a> 支持 <code>route-meta</code> 标签</h2> <p><a href="https://github.com/ktsn/vue-route-generator#route-meta" target="_blank" rel="noopener noreferrer">route-meta<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>动态生成 <code>route</code> 配置能否带上额外的<code>meta</code>配置，需要我们手动去添加支持 <code>&lt;route-meta&gt;</code> 标签的 <code>loader</code></p> <h3 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h3> <div class="language- extra-class"><pre class="language-text"><code>{
+  // ...
+  module: {
+    rules: [
+      {
+        resourceQuery: /blockType=route-meta/,
+        loader: require.resolve('@kuaizi/vue-cli-auto-router/meta-loader.js')
+      }
+    ]
+  }
+  // ...
+}
+</code></pre></div><p>添加支持 <code>&lt;route-meta&gt;</code> 标签</p> <h3 id="使用-3"><a href="#使用-3" class="header-anchor">#</a> 使用</h3> <div class="language- extra-class"><pre class="language-text"><code># index/views/manage/index.vue
+&lt;route-meta&gt;
+{
+  &quot;name&quot;: &quot;manage-user-define&quot;,
+  &quot;sidebar&quot;: false
+}
+&lt;/route-meta&gt;
+
+&lt;template&gt;
+  &lt;Layout&gt;
+    &lt;!-- more --&gt;
+  &lt;/Layout&gt;
+&lt;/template&gt;
+</code></pre></div><p><code>&lt;route-meta&gt;</code> 包含一个 <code>json</code> 的内容, 其中 <code>name</code>字段会同步到 <code>route/index.js</code> 所在的路由配置</p> <p>启动项目后生成文件<code>index/routes/index.js</code></p> <div class="language- extra-class"><pre class="language-text"><code>export default [
+  //...
+  {
+    name: 'manage-user-define',
+    path: '/manage',
+    component: ManageIndex,
+    meta: {
+      &quot;sidebar&quot;: false
+    }
+  }
+  //...
+]
+</code></pre></div><h3 id="vue-router-direct"><a href="#vue-router-direct" class="header-anchor">#</a> <code>vue-router direct</code></h3> <p>路由的跳转需要手动去添加</p> <div class="language- extra-class"><pre class="language-text"><code># index/main.js
+// ...
+import Router from '@/router'
+import routes from './routes'
+import App from './App'
+
+// 定义跳转
+routes.unshift({
+  path: '/manage',
+  redirect: '/manage/hello'
+})
+
+boostrap({ Router, Component: App, routes })
+</code></pre></div></div> <p class="theme-track--content-page"><a href="/blog/post/vue-cli-plugin-register-component.html" class="prev"><i class="iconfont icon-prev"></i>
+            vue 组件自动注册插件
+          </a> <a href="/blog/post/about-code-review.html" class="next">
+            【转】Code Review 程序员的寄望与哀伤
+            <i class="iconfont icon-next"></i></a></p> <div id="comment-container"></div></div></div></div></div> <div class="theme-track--footer"><p>MIT Licensed | Copyright © 2018-present <a href="//www.kuaizi.ai" target="_blank">www.kuaizi.ai</a>, <a href="https://kuaizi-co.github.io/blog/rss.xml" target="_blank">订阅周刊</a></p> <p>
+  Powered by vuepress theme <a href="//github.com/tomieric/vuepress-theme-track" target="_blank">Track</a>.
+  Inspired by <a href="//github.com/Yubisaki/vuepress-theme-yubisaki" target="_blank">yubisaki</a></p></div></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.9a207954.js" defer></script><script src="/blog/assets/js/6.d4095322.js" defer></script><script src="/blog/assets/js/4.64cbf7a8.js" defer></script><script src="/blog/assets/js/28.a5fc788a.js" defer></script><script src="/blog/assets/js/10.ce23e8e8.js" defer></script><script src="/blog/assets/js/11.7cde289b.js" defer></script><script src="/blog/assets/js/30.967a757e.js" defer></script><script src="/blog/assets/js/25.3294d02e.js" defer></script><script src="/blog/assets/js/13.4b26077c.js" defer></script><script src="/blog/assets/js/21.65ff6ff5.js" defer></script><script src="/blog/assets/js/31.6775aed3.js" defer></script><script src="/blog/assets/js/23.c6a37407.js" defer></script><script src="/blog/assets/js/15.b4502122.js" defer></script><script src="/blog/assets/js/5.865b38fd.js" defer></script><script src="/blog/assets/js/50.240d63b7.js" defer></script><script src="/blog/assets/js/24.193852d3.js" defer></script>
+  </body>
+</html>
