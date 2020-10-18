@@ -26,6 +26,6 @@
     "@tomieric/vuepress-plugin-rss": "^1.0.8",
     "serve": "^10.1.1",
     "vuepress": "^1.7.1",
-    "vuepress-theme-track": "^2.0.1"
+    "vuepress-theme-track": "^2.0.2"
   }
 }
